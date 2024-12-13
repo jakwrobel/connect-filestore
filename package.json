@@ -1,6 +1,6 @@
 {
-    "name": "@elasticio/petstore-component-nodejs",
-    "description": "elastic.io component for the Petstore API",
+    "name": "@elasticio/filestore-component-nodejs",
+    "description": "elastic.io component for the Filestore API",
     "scripts": {
         "pretest": "eslint lib spec-integration verifyCredentials.js --fix",
         "test": "exit 0"
