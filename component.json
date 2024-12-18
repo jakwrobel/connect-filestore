@@ -1,6 +1,6 @@
 {
   "title": "Filestore API (Node.js)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "elastic.io component for the Filestore API",
   "docsUrl": "",
   "buildType":"docker",
@@ -28,7 +28,7 @@
           "label": "File id",
           "required": true,
           "viewClass": "SelectView",
-          "model": "getStatusModel",
+          "model": "getFile",
           "prompt": "Provide a file Id"
         }
       },
