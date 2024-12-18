@@ -27,8 +27,6 @@
         "fileId": {
           "label": "File id",
           "required": true,
-          "viewClass": "SelectView",
-          "model": "getFile",
           "prompt": "Provide a file Id"
         }
       },
