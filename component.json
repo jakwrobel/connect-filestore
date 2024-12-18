@@ -10,55 +10,30 @@
         "label": "API key",
         "required": true,
         "viewClass": "PasswordFieldView",
-        "note": "Please use 'secret' as API key. For more details see Petstore API docs: https://petstore.elastic.io/docs"
+        "note": "Filestore API Key"
       }
     }
   },
   "triggers": {
-    "getPetsByStatus": {
-      "main": "./lib/triggers/getPetsByStatus.js",
+    "getFile": {
+      "main": "./lib/triggers/getFile.js",
       "type": "polling",
-      "title": "Get Pets By Status (Dynamic Data Example)",
+      "title": "Get file",
       "help": {
-        "description": "Get pets by status, with the available statuses pulled dynamically from API",
-        "link": "/components/petstore-nodejs"
+        "description": "Download a specific file from the filestore",
+        "link": "/components/filestore-nodejs"
       },
       "fields": {
-        "status": {
-          "label": "Pet Status",
+        "fileId": {
+          "label": "File id",
           "required": true,
           "viewClass": "SelectView",
           "model": "getStatusModel",
-          "prompt": "Select Pet Status"
+          "prompt": "Provide a file Id"
         }
       },
       "metadata": {
-        "out": "./lib/schemas/getPetsByStatus.out.json"
-      }
-    },
-    "getPetsByStatusWithStaticData": {
-      "main": "./lib/triggers/getPetsByStatusWithStaticData.js",
-      "type": "polling",
-      "title": "Get Pets By Status (Static Data Example)",
-      "help": {
-        "description": "Get pets by status, with the available statuses statically typed to the component.json",
-        "link": "/components/petstore-nodejs"
-      },
-      "fields": {
-        "status": {
-          "label": "Pet Status",
-          "required": true,
-          "viewClass": "SelectView",
-          "model": {
-            "available": "Available",
-            "pending": "Pending",
-            "sold": "Sold"
-          },
-          "prompt": "Select Pet Status"
-        }
-      },
-      "metadata": {
-        "out": "./lib/schemas/getPetsByStatus.out.json"
+        "out": "./lib/schemas/getFile.out.json"
       }
     }
   },
