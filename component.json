@@ -20,29 +20,10 @@
     }
   },
   "triggers": {
-    "getFile": {
-      "main": "./lib/triggers/getFile.js",
-      "type": "polling",
-      "title": "Get file",
-      "help": {
-        "description": "Download a specific file from the filestore",
-        "link": "/components/filestore-nodejs"
-      },
-      "fields": {
-        "fileId": {
-          "label": "File id",
-          "required": true,
-          "prompt": "Provide a file Id"
-        }
-      },
-      "metadata": {
-        "out": "./lib/schemas/getFile.out.json"
-      }
-    }
   },
   "actions": {
     "getFile": {
-      "main": "./lib/actions/getPet.js",
+      "main": "./lib/actions/getFile.js",
       "title": "Get a file",
       "help": {
         "description": "Creates a pet and adds it to the shop",
