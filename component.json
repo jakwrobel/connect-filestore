@@ -25,14 +25,14 @@
   "actions": {
     "getFile": {
       "main": "./lib/actions/getFile.js",
-      "title": "Get a file",
+      "title": "Get a file data",
       "help": {
-        "description": "Creates a pet and adds it to the shop",
-        "link": "/components/petstore-nodejs"
+        "description": "fetches the file data, based on the specific file id",
+        "link": "/components/filestore"
       },
       "metadata": {
-        "in": "./lib/schemas/createPet.in.json",
-        "out": "./lib/schemas/createPet.out.json"
+        "in": "./lib/schemas/getFile.in.json",
+        "out": "./lib/schemas/getFile.out.json"
       }
     }
   }
