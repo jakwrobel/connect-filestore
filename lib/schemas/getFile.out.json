@@ -1,44 +1,45 @@
 {
   "type": "object",
   "properties": {
-    "pets": {
-      "type": "array",
+    "fileId": {
+      "type": "string",
       "required": true,
-      "title": "Pets",
-      "properties": {
-        "id": {
-          "type": "numeric",
-          "required": true,
-          "title": "ID"
-        },
-        "name": {
-          "type": "string",
-          "required": true,
-          "title": "Name"
-        },
-        "status": {
-          "type": "string",
-          "required": true,
-          "title": "Status"
-        },
-        "category": {
-          "type": "object",
-          "required": true,
-          "title": "Category",
-          "properties": {
-            "id": {
-              "type": "numeric",
-              "required": true,
-              "title": "Category ID"
-            },
-            "name": {
-              "type": "string",
-              "required": true,
-              "title": "Category Name"
-            }
-          }
-        }
-      }
+      "title": "fileId"
+    },
+    "source": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "size": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "access": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "virusScan": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "contentType": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "updatedAt": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "download": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
     }
   }
 }
