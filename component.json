@@ -15,7 +15,7 @@
       "tenantId": {
         "label": "Tenant ID",
         "required": true,
-        "viewClass": "PasswordFieldView",
+        "viewClass": "TextFieldView",
         "note": "DXP tenant id"
       }
     }
