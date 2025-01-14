@@ -23,6 +23,17 @@
   "triggers": {
   },
   "actions": {
+    "getFile": {
+      "main": "./lib/actions/getFile.js",
+      "title": "Get a file data",
+      "help": {
+        "description": "fetches the file with the provided id",
+        "link": "/components/filestore"
+      },
+      "metadata": {
+        "in": "./lib/schemas/getFile.in.json",
+      }
+    },
     "getFileData": {
       "main": "./lib/actions/getFileData.js",
       "title": "Get a file data",

@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+      "fileId": {
+        "type": "string",
+        "required": true,
+        "title": "File ID"
+      }
+    }
+  }
+  
