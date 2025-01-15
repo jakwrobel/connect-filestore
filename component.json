@@ -1,50 +1,49 @@
 {
-  "title": "Filestore API (Node.js)",
-  "version": "0.0.35",
-  "description": "elastic.io component for the Filestore API",
-  "docsUrl": "",
-  "buildType":"docker",
-  "credentials": {
-    "fields": {
-      "apiKey": {
-        "label": "API key",
-        "required": true,
-        "viewClass": "PasswordFieldView",
-        "note": "Filestore API Key"
-      },
-      "tenantId": {
-        "label": "Tenant ID",
-        "required": true,
-        "viewClass": "TextFieldView",
-        "note": "DXP tenant id"
-      }
-    }
-  },
-  "triggers": {
-  },
-  "actions": {
-    "getFile": {
-      "main": "./lib/actions/getFile.js",
-      "title": "Download file",
-      "help": {
-        "description": "fetches the file with the provided id",
-        "link": "/components/filestore"
-      },
-      "metadata": {
-        "in": "./lib/schemas/getFile.in.json"
-      }
-    },
-    "getFileData": {
-      "main": "./lib/actions/getFileData.js",
-      "title": "Get a file data",
-      "help": {
-        "description": "fetches the file data, based on the specific file id",
-        "link": "/components/filestore"
-      },
-      "metadata": {
-        "in": "./lib/schemas/getFileData.in.json",
-        "out": "./lib/schemas/getFileData.out.json"
-      }
-    }
-  }
+	"title": "Filestore API (Node.js)",
+	"version": "0.0.36",
+	"description": "elastic.io component for the Filestore API",
+	"docsUrl": "",
+	"buildType": "docker",
+	"credentials": {
+		"fields": {
+			"apiKey": {
+				"label": "API key",
+				"required": true,
+				"viewClass": "PasswordFieldView",
+				"note": "Filestore API Key"
+			},
+			"tenantId": {
+				"label": "Tenant ID",
+				"required": true,
+				"viewClass": "TextFieldView",
+				"note": "DXP tenant id"
+			}
+		}
+	},
+	"triggers": {},
+	"actions": {
+		"getFile": {
+			"main": "./lib/actions/getFile.js",
+			"title": "Download file",
+			"help": {
+				"description": "fetches the file with the provided id",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/getFile.in.json"
+			}
+		},
+		"getFileData": {
+			"main": "./lib/actions/getFileData.js",
+			"title": "Get a file data",
+			"help": {
+				"description": "fetches the file data, based on the specific file id",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/getFileData.in.json",
+				"out": "./lib/schemas/getFileData.out.json"
+			}
+		}
+	}
 }
