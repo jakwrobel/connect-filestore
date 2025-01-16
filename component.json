@@ -1,11 +1,17 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.42",
+	"version": "0.0.43",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"buildType": "docker",
 	"credentials": {
 		"fields": {
+			"resourceServerUrl": {
+				"label": "Resource server URL",
+				"required": true,
+				"viewClass": "TextFieldView",
+				"note": "Filestore server URL"
+			},
 			"apiKey": {
 				"label": "API key",
 				"required": true,
