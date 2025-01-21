@@ -1,6 +1,6 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.46",
+	"version": "0.0.47",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"buildType": "docker",
@@ -39,16 +39,27 @@
 				"in": "./lib/schemas/getFile.in.json"
 			}
 		},
-		"getFileData": {
-			"main": "./lib/actions/getFileData.js",
-			"title": "Get a file data",
+		"lookupFileById": {
+			"main": "./lib/actions/lookupFileById.js",
+			"title": "Lookup file by ID",
 			"help": {
 				"description": "fetches the file data, based on the specific file id",
 				"link": "/components/filestore"
 			},
 			"metadata": {
-				"in": "./lib/schemas/getFileData.in.json",
-				"out": "./lib/schemas/getFileData.out.json"
+				"in": "./lib/schemas/lookupFileById.in.json",
+				"out": "./lib/schemas/lookupFileById.out.json"
+			}
+		},
+		"deleteFileById": {
+			"main": "./lib/actions/deleteFileById.js",
+			"title": "Delete file by ID",
+			"help": {
+				"description": "delete file with the specific id",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/deleteFileById.in.json"
 			}
 		}
 	}
