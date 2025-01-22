@@ -1,6 +1,6 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.55",
+	"version": "0.0.56",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"buildType": "docker",
