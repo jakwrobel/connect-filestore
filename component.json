@@ -51,17 +51,6 @@
 				"out": "./lib/schemas/lookupFileById.out.json"
 			}
 		},
-		"uploadFile": {
-			"main": "./lib/actions/uploadFile.js",
-			"title": "Upload file",
-			"help": {
-				"description": "Upload a file to your filestore instance",
-				"link": "/components/filestore"
-			},
-			"metadata": {
-				"in": "./lib/schemas/uploadFile.in.json"
-			}
-		},
 		"updateFile": {
 			"main": "./lib/actions/updateFile.js",
 			"title": "Update file",
