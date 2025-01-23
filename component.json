@@ -28,15 +28,27 @@
 	},
 	"triggers": {},
 	"actions": {
-		"getFile": {
-			"main": "./lib/actions/getFile.js",
-			"title": "Download file",
+		"lookupFileById": {
+			"main": "./lib/actions/lookupFileById.js",
+			"title": "Lookup file by ID",
 			"help": {
-				"description": "fetches the file with the provided id",
+				"description": "Retrieve file data using a specific file ID",
 				"link": "/components/filestore"
 			},
 			"metadata": {
-				"in": "./lib/schemas/getFile.in.json"
+				"in": "./lib/schemas/lookupFileById.in.json",
+				"out": "./lib/schemas/lookupFileById.out.json"
+			}
+		},
+		"uploadFile": {
+			"main": "./lib/actions/uploadFile.js",
+			"title": "Upload file",
+			"help": {
+				"description": "Upload a file to your filestore instance",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/uploadFile.in.json"
 			}
 		},
 		"updateFile": {
@@ -48,6 +60,28 @@
 			},
 			"metadata": {
 				"in": "./lib/schemas/updateFile.in.json"
+			}
+		},
+		"deleteFileById": {
+			"main": "./lib/actions/deleteFileById.js",
+			"title": "Delete file by ID",
+			"help": {
+				"description": "Delete a file with a specific ID",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/deleteFileById.in.json"
+			}
+		},
+		"rawRequest": {
+			"main": "./lib/actions/rawRequest.js",
+			"title": "Raw request",
+			"help": {
+				"description": "Make a custom request to the provided endpoint",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/rawRequest.in.json"
 			}
 		}
 	}
