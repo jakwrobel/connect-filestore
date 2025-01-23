@@ -83,17 +83,6 @@
 			"metadata": {
 				"in": "./lib/schemas/deleteFileById.in.json"
 			}
-		},
-		"rawRequest": {
-			"main": "./lib/actions/rawRequest.js",
-			"title": "Raw request",
-			"help": {
-				"description": "Make a custom request to the provided endpoint",
-				"link": "/components/filestore"
-			},
-			"metadata": {
-				"in": "./lib/schemas/rawRequest.in.json"
-			}
 		}
 	}
 }
