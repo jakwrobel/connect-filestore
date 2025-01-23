@@ -39,18 +39,6 @@
 				"in": "./lib/schemas/getFile.in.json"
 			}
 		},
-		"lookupFileById": {
-			"main": "./lib/actions/lookupFileById.js",
-			"title": "Lookup file by ID",
-			"help": {
-				"description": "Retrieve file data using a specific file ID",
-				"link": "/components/filestore"
-			},
-			"metadata": {
-				"in": "./lib/schemas/lookupFileById.in.json",
-				"out": "./lib/schemas/lookupFileById.out.json"
-			}
-		},
 		"updateFile": {
 			"main": "./lib/actions/updateFile.js",
 			"title": "Update file",
