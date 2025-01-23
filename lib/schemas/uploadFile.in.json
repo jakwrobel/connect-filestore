@@ -15,6 +15,11 @@
       "type": "string",
       "required": false,
       "title": "Access (private or public)"
+    },
+    "uploadType": {
+      "type": "string",
+      "required": false,
+      "title": "Uplaod type (direct or resumable)"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
     "type": "object",
     "properties": {
-      "fileId": {
+      "fileToDelete": {
         "type": "string",
         "required": true,
         "title": "Provide Id of the file to delete"

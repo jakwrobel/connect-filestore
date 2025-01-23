@@ -1,10 +1,10 @@
 {
   "type": "object",
   "properties": {
-    "fileId": {
+    "fileToGet": {
       "type": "string",
       "required": true,
-      "title": "File ID"
+      "title": "Provide Id of the file you want to look up"
     }
   }
 }
