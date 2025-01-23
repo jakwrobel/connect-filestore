@@ -1,6 +1,6 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.62",
+	"version": "0.0.63",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"buildType": "docker",
@@ -82,6 +82,17 @@
 			},
 			"metadata": {
 				"in": "./lib/schemas/deleteFileById.in.json"
+			}
+		},
+		"rawRequest": {
+			"main": "./lib/actions/rawRequest.js",
+			"title": "Raw request",
+			"help": {
+				"description": "Make a custom request to the provided endpoint",
+				"link": "/components/filestore"
+			},
+			"metadata": {
+				"in": "./lib/schemas/rawRequest.in.json"
 			}
 		}
 	}
