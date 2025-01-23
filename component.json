@@ -49,17 +49,6 @@
 			"metadata": {
 				"in": "./lib/schemas/updateFile.in.json"
 			}
-		},
-		"deleteFileById": {
-			"main": "./lib/actions/deleteFileById.js",
-			"title": "Delete file by ID",
-			"help": {
-				"description": "Delete a file with a specific ID",
-				"link": "/components/filestore"
-			},
-			"metadata": {
-				"in": "./lib/schemas/deleteFileById.in.json"
-			}
 		}
 	}
 }
