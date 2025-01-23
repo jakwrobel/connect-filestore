@@ -4,7 +4,7 @@
       "fileId": {
         "type": "string",
         "required": true,
-        "title": "File ID"
+        "title": "Provide Id of the file to delete"
       }
     }
   }
