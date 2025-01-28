@@ -1,25 +1,20 @@
 {
   "type": "object",
   "properties": {
-    "source": {
+    "filePath": {
       "type": "string",
       "required": true,
-      "title": "File name and path"
+      "title": "The path under which data will be saved (including file's name and extension)"
     },
     "data": {
       "type": "string",
       "required": true,
-      "title": "File to upload"
+      "title": "Data to upload"
     },
     "access": {
       "type": "string",
       "required": false,
       "title": "Access (private or public)"
-    },
-    "uploadType": {
-      "type": "string",
-      "required": false,
-      "title": "Uplaod type (direct or resumable)"
     }
   }
 }
