@@ -15,6 +15,7 @@
     },
     "dependencies": {
         "@elastic.io/component-commons-library": "3.2.1",
+        "axios": "^1.7.9",
         "chai": "4.2.0",
         "elasticio-node": "0.0.9",
         "elasticio-sailor-nodejs": "2.6.27",
