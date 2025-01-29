@@ -1,31 +1,25 @@
 {
-    "type": "object",
-    "properties": {
-      "source": {
-        "type": "string",
-        "required": true,
-        "title": "File name and path"
-      },
-      "data": {
-        "type": "string",
-        "required": true,
-        "title": "File to upload"
-      },
-      "access": {
-        "type": "string",
-        "required": false,
-        "title": "Access (private or public)"
-      },
-      "uploadType": {
-        "type": "string",
-        "required": false,
-        "title": "Uplaod type (direct or resumable)"
-      },
-      "fileToUpdate": {
-        "type": "string",
-        "required": true,
-        "title": "Provide Id of the file you want to look up"
-    }
+  "type": "object",
+  "properties": {
+    "filePath": {
+      "type": "string",
+      "required": true,
+      "title": "The path under which data will be saved (including file's name and extension)"
+    },
+    "data": {
+      "type": "string",
+      "required": true,
+      "title": "Data to upload"
+    },
+    "access": {
+      "type": "string",
+      "required": false,
+      "enum": ["private", "public", "Sold"]
+    },
+    "fileToUpdate": {
+      "type": "string",
+      "required": true,
+      "title": "Id of the file to update"
     }
   }
-  
+}
