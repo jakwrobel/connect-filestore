@@ -14,7 +14,7 @@
     "access": {
       "type": "string",
       "required": false,
-      "title": "Access (private or public)"
+      "enum": ["private", "public", "Sold"]
     }
   }
 }
