@@ -1,6 +1,6 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.149",
+	"version": "0.0.150",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"buildType": "docker",
@@ -84,7 +84,8 @@
 				"link": "/components/filestore"
 			},
 			"metadata": {
-				"in": "./lib/schemas/rawRequest.in.json"
+				"in": "./lib/schemas/rawRequest.in.json",
+				"out": "./lib/schemas/rawRequest.out.json"
 			}
 		}
 	}

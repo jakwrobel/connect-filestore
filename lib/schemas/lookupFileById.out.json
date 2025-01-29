@@ -12,7 +12,7 @@
       "title": "fileId"
     },
     "size": {
-      "type": "string",
+      "type": "numeric",
       "required": true,
       "title": "fileId"
     },

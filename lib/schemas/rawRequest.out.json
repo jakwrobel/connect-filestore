@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "required": true,
+        "title": "fileId"
+      },
+      "attachments": {
+        "type": "object",
+        "required": true,
+        "title": "attachments",
+        "properties": {}
+      },
+      "body": {
+        "type": "object",
+        "required": true,
+        "title": "body",
+        "properties": {
+        }
+      },
+      "headers": {
+        "type": "object",
+        "required": true,
+        "title": "headers",
+        "properties": {}
+      },
+      "metadata": {
+        "type": "object",
+        "required": true,
+        "title": "metadata",
+        "properties": {}
+      }
+    }
+  }
+  
