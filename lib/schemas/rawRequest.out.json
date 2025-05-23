@@ -1,36 +1,40 @@
 {
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "required": true,
-        "title": "fileId"
-      },
-      "attachments": {
-        "type": "object",
-        "required": true,
-        "title": "attachments",
-        "properties": {}
-      },
-      "body": {
-        "type": "object",
-        "required": true,
-        "title": "body",
-        "properties": {
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "title": "fileId"
+    },
+    "attachments": {
+      "type": "object",
+      "required": true,
+      "title": "attachments",
+      "properties": {}
+    },
+    "body": {
+      "type": "object",
+      "required": true,
+      "title": "body",
+      "properties": {
+        "message": {
+          "type": "string",
+          "required": true,
+          "title": "message"
         }
-      },
-      "headers": {
-        "type": "object",
-        "required": true,
-        "title": "headers",
-        "properties": {}
-      },
-      "metadata": {
-        "type": "object",
-        "required": true,
-        "title": "metadata",
-        "properties": {}
       }
+    },
+    "headers": {
+      "type": "object",
+      "required": true,
+      "title": "headers",
+      "properties": {}
+    },
+    "metadata": {
+      "type": "object",
+      "required": true,
+      "title": "metadata",
+      "properties": {}
     }
   }
-  
+}
