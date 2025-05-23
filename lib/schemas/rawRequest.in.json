@@ -21,10 +21,25 @@
       "required": false,
       "title": "Request's body"
     },
-    "dataToSend": {
+    "useConnectStorage": {
+      "type": "boolean",
+      "required": false,
+      "title": "Use connect storage? Useful while uploading a file to the filestore server"
+    },
+    "access": {
       "type": "string",
       "required": false,
-      "title": "Data to send (will be encoded and added to the request's body)"
+      "title": "Uploaded file access"
+    },
+    "filePath": {
+      "type": "string",
+      "required": false,
+      "title": "Path to the file to be uploaded or updated"
+    },
+    "fileToUpdate": {
+      "type": "string",
+      "required": false,
+      "title": "Id of the file to be updated"
     }
   }
 }
