@@ -6,11 +6,6 @@
       "required": true,
       "title": "The path under which data will be saved (including file's name and extension)"
     },
-    "data": {
-      "type": "string",
-      "required": true,
-      "title": "Data to upload"
-    },
     "access": {
       "type": "string",
       "required": false,
