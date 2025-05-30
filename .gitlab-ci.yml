@@ -1,0 +1,13 @@
+stages:
+  - install
+  - test
+
+install-dependencies:
+  stage: install
+  script:
+    - npm install
+
+run-tests:
+  stage: test
+  script:
+    - npm test
