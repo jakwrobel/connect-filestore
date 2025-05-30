@@ -1,6 +1,6 @@
 {
 	"title": "Filestore API (Node.js)",
-	"version": "0.0.292",
+	"version": "0.0.293",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
 	"credentials": {
@@ -31,8 +31,7 @@
 			"main": "./lib/actions/lookupFileById.js",
 			"title": "Lookup file by ID",
 			"help": {
-				"description": "Retrieve file data using a specific file ID",
-				"link": "/components/filestore"
+				"description": "Retrieve file data using a specific file ID"
 			},
 			"metadata": {
 				"in": "./lib/schemas/lookupFileById.in.json",
@@ -43,8 +42,7 @@
 			"main": "./lib/actions/uploadFile.js",
 			"title": "Upload file",
 			"help": {
-				"description": "Upload a file to your filestore instance",
-				"link": "/components/filestore"
+				"description": "Upload a file to your filestore instance"
 			},
 			"metadata": {
 				"in": "./lib/schemas/uploadFile.in.json",
@@ -55,8 +53,7 @@
 			"main": "./lib/actions/updateFile.js",
 			"title": "Update file",
 			"help": {
-				"description": "Update a file with a specific ID",
-				"link": "/components/filestore"
+				"description": "Update a file with a specific ID"
 			},
 			"metadata": {
 				"in": "./lib/schemas/updateFile.in.json",
@@ -67,8 +64,7 @@
 			"main": "./lib/actions/deleteFileById.js",
 			"title": "Delete file by ID",
 			"help": {
-				"description": "Delete a file with a specific ID",
-				"link": "/components/filestore"
+				"description": "Delete a file with a specific ID"
 			},
 			"metadata": {
 				"in": "./lib/schemas/deleteFileById.in.json",
@@ -79,8 +75,7 @@
 			"main": "./lib/actions/rawRequest.js",
 			"title": "Raw request",
 			"help": {
-				"description": "Make a custom request to the provided endpoint",
-				"link": "/components/filestore"
+				"description": "Make a custom request to the provided endpoint"
 			},
 			"metadata": {
 				"in": "./lib/schemas/rawRequest.in.json",

@@ -1,9 +1,11 @@
 const FilestoreClient = require("../filestoreClient");
 
 /**
- * Executes the verification logic by sending a simple to the
- * Petstore API using the provided apiKey.
- * If the request succeeds, we can assume that the apiKey is valid. Otherwise it is not valid.
+ * Executes the verification logic by sending a simple request to the server
+ * If the request succeeds or returns response with 400 code we can assume that the apiKey is valid. Otherwise it is not valid.
+ * Response with code 400 is considered to be okay, because all filestore endpoints require additional parameters like e.g. fileId
+ * which can not be provided during credentials verification, as they are not credentials.
+ * If the credentials are not valid, filestore server will return 401 or 403 response.
  *
  * @param credentials object to retrieve apiKey from
  *
@@ -29,7 +31,7 @@ module.exports = async function verify(credentials) {
       },
     });
     this.logger.info('request succeeded')
-    return { verified: true };
+    return true;
   } catch (e) {
     this.logger.info('catch block')
     this.logger.info('response', e.response)

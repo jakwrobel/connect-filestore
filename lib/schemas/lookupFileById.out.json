@@ -9,37 +9,37 @@
     "source": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "source"
     },
     "size": {
       "type": "numeric",
       "required": true,
-      "title": "fileId"
+      "title": "size"
     },
     "access": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "access"
     },
     "virusScan": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "virusScan"
     },
     "contentType": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "contentType"
     },
     "updatedAt": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "updatedAt"
     },
     "download": {
       "type": "string",
       "required": true,
-      "title": "fileId"
+      "title": "download"
     }
   }
 }
