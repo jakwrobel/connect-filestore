@@ -19,6 +19,7 @@ module.exports = async function verify(credentials) {
   // const client = new MagentoClient(this, credentials);
 
   try {
+    console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
     const result = await client.makeRequest({
       url: `${resourceServerUrl}/api/v2/file/`,
       method: "GET",
@@ -29,6 +30,8 @@ module.exports = async function verify(credentials) {
     });
     return true;
   } catch (e) {
+    console.log(e)
+    console.log(e.response)
     if (e.response) {
       const status = e.response.status;
       if (status === 400) {
