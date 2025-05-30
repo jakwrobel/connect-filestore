@@ -1,8 +1,10 @@
-image: node:20
-
 stages:
   - install
   - test
+
+default:
+    image:
+        name: docker-hub.squiz.net/docker/base-images/node:22-alpine
 
 install-dependencies:
   stage: install
