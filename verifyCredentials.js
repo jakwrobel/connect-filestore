@@ -1,4 +1,4 @@
-// const MagentoClient = require('./lib/petstoreClient');
+const FilestoreClient = require("../filestoreClient");
 
 /**
  * Executes the verification logic by sending a simple to the
@@ -15,8 +15,7 @@ module.exports = async function verify(credentials) {
   if (!apiKey) throw new Error("API key is missing");
   if (!tenantId) throw new Error("Tenant ID is missing");
   if (!resourceServerUrl) throw new Error("Resource server URL is missing");
-
-  // const client = new MagentoClient(this, credentials);
+  const client = new FilestoreClient(this, credentials);
 
   try {
     console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
@@ -28,17 +27,22 @@ module.exports = async function verify(credentials) {
         "x-dxp-tenant": tenantId,
       },
     });
+    console.log('request succeeded')
     return true;
   } catch (e) {
-    console.log(e)
-    console.log(e.response)
+    console.log('catch block')
+    console.log('e', e)
+    console.log('response', e.response)
+    console.log('status', e.response.status)
     if (e.response) {
+      console.log('e.response block')
       const status = e.response.status;
       if (status === 400) {
+        console.log('status 400 block')
         return true;
       }
     }
-
+    console.log('other codes error block')
     // Other cases (no response, status other than 2xx or 400)
     return false;
   }
