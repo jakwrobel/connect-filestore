@@ -19,6 +19,7 @@ module.exports = async function verify(credentials) {
 
   try {
     this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
+    console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
     const result = await client.makeRequest({
       url: `${resourceServerUrl}/api/v2/file/`,
       method: "GET",
@@ -31,7 +32,6 @@ module.exports = async function verify(credentials) {
     return { verified: true };
   } catch (e) {
     this.logger.info('catch block')
-    this.logger.info('e', e)
     this.logger.info('response', e.response)
     this.logger.info('status', e.response.status)
     if (e.response) {
