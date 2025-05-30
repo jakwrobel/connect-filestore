@@ -18,7 +18,7 @@ module.exports = async function verify(credentials) {
   const client = new FilestoreClient(this, credentials);
 
   try {
-    console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
+    this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
     const result = await client.makeRequest({
       url: `${resourceServerUrl}/api/v2/file/`,
       method: "GET",
@@ -27,23 +27,23 @@ module.exports = async function verify(credentials) {
         "x-dxp-tenant": tenantId,
       },
     });
-    console.log('request succeeded')
-    return true;
+    this.logger.info('request succeeded')
+    return { verified: true };
   } catch (e) {
-    console.log('catch block')
-    console.log('e', e)
-    console.log('response', e.response)
-    console.log('status', e.response.status)
+    this.logger.info('catch block')
+    this.logger.info('e', e)
+    this.logger.info('response', e.response)
+    this.logger.info('status', e.response.status)
     if (e.response) {
-      console.log('e.response block')
+      this.logger.info('e.response block')
       const status = e.response.status;
       if (status === 400) {
-        console.log('status 400 block')
+        this.logger.info('status 400 block')
         return true;
       }
     }
-    console.log('other codes error block')
+    this.logger.info('other codes error block')
     // Other cases (no response, status other than 2xx or 400)
-    return false;
+    throw new Error("Verification failed")
   }
 };
