@@ -18,6 +18,8 @@ module.exports = async function verify(credentials) {
   if (!tenantId) throw new Error("Tenant ID is missing");
   if (!resourceServerUrl) throw new Error("Resource server URL is missing");
   const client = new FilestoreClient(this, credentials);
+  this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
+    console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
 
   try {
     this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
