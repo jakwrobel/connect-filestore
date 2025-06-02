@@ -3,6 +3,7 @@
 	"version": "0.0.298",
 	"description": "elastic.io component for the Filestore API",
 	"docsUrl": "",
+	"buildType":"docker",
 	"credentials": {
 		"fields": {
 			"resourceServerUrl": {
