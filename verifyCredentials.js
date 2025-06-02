@@ -12,6 +12,7 @@ const FilestoreClient = require("../filestoreClient");
  * @returns boolean of whether or not the request was successful
  */
 module.exports = async function verify(credentials) {
+  this.logger.info("verify called")
   const { apiKey, tenantId, resourceServerUrl } = credentials;
 
   if (!apiKey) throw new Error("API key is missing");
