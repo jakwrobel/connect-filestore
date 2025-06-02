@@ -8,6 +8,8 @@
  * @returns boolean of whether or not the request was successful
  */
 module.exports = async function verify(credentials) {
+  this.logger.info("verify")
+  const client = new FilestoreClient(this, credentials);)
   const { apiKey } = credentials;
 
   if (!apiKey) throw new Error('API key is missing');
