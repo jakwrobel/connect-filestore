@@ -1,4 +1,4 @@
-export async function verify(cfg) {
+export async function verifyCredentials(cfg) {
 
   try {
     this.logger.info('Verification completed successfully');
