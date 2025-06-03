@@ -36,11 +36,11 @@ module.exports = async function verify(credentials) {
       return true;
     }
     if (status >= 500) {
-      this.loger.info("Verify function failed",e?.response?.data?.message);
+      this.logger.info("Verify function failed",e?.response?.data?.message);
       throw new Error("Inrernal server error. Please try again later.");
     }
-    this.loger.error("Failed",e);
-    this.loger.error("Verify failed",e?.response?.data?.message);
+    this.logger.error("Failed",e);
+    this.logger.error("Verify failed",e?.response?.data?.message);
     throw new Error("Verification failed");
   }
 };
