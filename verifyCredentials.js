@@ -1,4 +1,3 @@
-const FilestoreClient = require("./lib/filestoreClient");
 const axios = require("axios");
 
 /**
@@ -13,41 +12,24 @@ const axios = require("axios");
  * @returns boolean of whether or not the request was successful
  */
 module.exports = async function verify(credentials) {
-  this.logger.info("verify called");
+  this.logger.info("Starting verification...");
   const { apiKey, tenantId, resourceServerUrl } = credentials;
 
-  if (!apiKey) throw new Error("API key is missing");
-  if (!tenantId) throw new Error("Tenant ID is missing");
-  if (!resourceServerUrl) throw new Error("Resource server URL is missing");
-  const client = new FilestoreClient(this, credentials);
-  // this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
-  //   console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
+  if (!apiKey) throw new Error("Verification failed. API key is missing");
+  if (!tenantId) throw new Error("Verification failed. Tenant ID is missing");
+  if (!resourceServerUrl) throw new Error("Verification failed. Resource server URL is missing");
 
   try {
-    this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl);
-    console.log("The credentials: ", apiKey, tenantId, resourceServerUrl);
-    const result = await axios.get(`${resourceServerUrl}/api/v2/file/`, {
+     await axios.get(`${resourceServerUrl}/api/v2/file/`, {
       headers: {
         "x-api-key": apiKey,
         "x-dxp-tenant": tenantId,
       },
     });
-
-    // const result = await client.makeRequest({
-    //   url: `${resourceServerUrl}/api/v2/file/`,
-    //   method: "GET",
-    //   headers: {
-    //     "x-api-key": apiKey,
-    //     "x-dxp-tenant": tenantId,
-    //   },
-    // });
+    
     this.logger.info("request succeeded");
     return true;
   } catch (e) {
-    this.logger.info("catch block");
-    this.logger.info("error: ", e);
-    this.logger.info("response: ", e?.response);
-    this.logger.info("status: ", e?.response?.status);
     const status = e?.response?.status;
     if (status === 400 || (status >= 200 && status < 300)) {
       this.logger.info("Verification succeeded");
@@ -57,7 +39,6 @@ module.exports = async function verify(credentials) {
       this.loger.info(e?.response?.data?.message);
       throw new Error("Inrernal server error. Please try again later.");
     }
-    // Other cases (no response, status other than 2xx or 400)
     throw new Error("Verification failed");
   }
 };
