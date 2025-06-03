@@ -26,8 +26,8 @@ module.exports = async function verify(credentials) {
         "x-dxp-tenant": tenantId,
       },
     });
-    
-    this.logger.info("request succeeded");
+
+    this.logger.info("Verification succeeded");
     return true;
   } catch (e) {
     const status = e?.response?.status;
@@ -36,9 +36,11 @@ module.exports = async function verify(credentials) {
       return true;
     }
     if (status >= 500) {
-      this.loger.info(e?.response?.data?.message);
+      this.loger.info("Verify function failed",e?.response?.data?.message);
       throw new Error("Inrernal server error. Please try again later.");
     }
+    this.loger.error("Failed",e);
+    this.loger.error("Verify failed",e?.response?.data?.message);
     throw new Error("Verification failed");
   }
 };
