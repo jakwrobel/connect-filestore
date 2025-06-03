@@ -17,10 +17,11 @@ module.exports = async function verify(credentials) {
 
   if (!apiKey) throw new Error("Verification failed. API key is missing");
   if (!tenantId) throw new Error("Verification failed. Tenant ID is missing");
-  if (!resourceServerUrl) throw new Error("Verification failed. Resource server URL is missing");
+  if (!resourceServerUrl)
+    throw new Error("Verification failed. Resource server URL is missing");
 
   try {
-     await axios.get(`${resourceServerUrl}/api/v2/file/`, {
+    await axios.get(`${resourceServerUrl}/api/v2/file/`, {
       headers: {
         "x-api-key": apiKey,
         "x-dxp-tenant": tenantId,
@@ -36,11 +37,10 @@ module.exports = async function verify(credentials) {
       return true;
     }
     if (status >= 500) {
-      this.logger.info("Verify function failed",e?.response?.data?.message);
+      this.logger.info("Verify function failed", e?.response?.data?.message);
       throw new Error("Inrernal server error. Please try again later.");
     }
-    this.logger.error("Failed",e);
-    this.logger.error("Verify failed",e?.response?.data?.message);
-    throw new Error("Verification failed");
+    this.logger.error("Verification failed", e?.response?.data?.message || e);
+    throw new Error(`Verification failed ${e?.response?.data?.message || e}`);
   }
 };
