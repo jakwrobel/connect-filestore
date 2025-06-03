@@ -1,6 +1,6 @@
 {
-    "name": "@elasticio/filestore-component-nodejs",
-    "description": "elastic.io component for the Filestore API",
+    "name": "filestore-component-nodejs",
+    "description": "Connect component for Filestore API",
     "scripts": {
         "test": "jest",
         "coverage": "jest --coverage"
@@ -9,7 +9,6 @@
         "type": "git",
         "url": "git@github.com:elasticio/filestore.git"
     },
-    "author": "elastic.io GmbH",
     "license": "BSD-2-Clause",
     "engines": {
         "node": "20"
