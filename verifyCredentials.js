@@ -1,4 +1,6 @@
 const FilestoreClient = require("./lib/filestoreClient");
+const axios= require('axios')
+
 
 /**
  * Executes the verification logic by sending a simple request to the server
@@ -25,19 +27,28 @@ module.exports = async function verify(credentials) {
   try {
     this.logger.info("The credentials: ", apiKey, tenantId, resourceServerUrl)
     console.log("The credentials: ", apiKey, tenantId, resourceServerUrl)
-    const result = await client.makeRequest({
-      url: `${resourceServerUrl}/api/v2/file/`,
-      method: "GET",
+    const result = await axios.get(`${resourceServerUrl}/api/v2/file/`, {
       headers: {
         "x-api-key": apiKey,
         "x-dxp-tenant": tenantId,
       },
     });
+
+    // const result = await client.makeRequest({
+    //   url: `${resourceServerUrl}/api/v2/file/`,
+    //   method: "GET",
+    //   headers: {
+    //     "x-api-key": apiKey,
+    //     "x-dxp-tenant": tenantId,
+    //   },
+    // });
     this.logger.info('request succeeded')
     return true;
   } catch (e) {
     this.logger.info('catch block')
     this.logger.info('error: ', e)
+    this.logger.info('response: ', e?.response)
+    this.logger.info('status: ', e?.response?.status)
 
     // if (e.response) {
     //   this.logger.info('e.response block')
